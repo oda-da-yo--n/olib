@@ -8,6 +8,9 @@
 *.gch
 *.pch
 
+# dependency file
+*.d
+
 # Compiled Dynamic libraries
 *.so
 *.dylib
@@ -26,3 +29,8 @@
 *.exe
 *.out
 *.app
+
+# Editor backup files
+\#*
+*~
+
