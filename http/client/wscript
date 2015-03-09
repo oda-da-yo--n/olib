@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+# -*- mode: python; coding: utf-8 -*-
+
+def options(opt):
+    opt.load('compiler_cxx')
+
+def configure(conf):
+    conf.load('compiler_cxx')
+    conf.env.INCLUDES += ['../..']
+    conf.env.CXXFLAGS += ['-std=c++11', '-Wc++11-compat',
+                          '-Wall', '-Werror', '-g' ]
+
+def build_client(bld):
+    bld.program( source = [ 'client.cpp' ], target = 'client' )
+
+def build(bld):
+    build_client(bld)
